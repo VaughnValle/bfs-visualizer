@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import COLORS from '../constants/Colors';
+import { extractMatchingColors } from '../helpers/Colors';
 
 const ColorSearch = ({ setColor }) => {
 
     const [searchQuery, setSearchQuery] = useState('');
-    const extractMatchingColors = () => {
-        return ["black", "yellow", "green", "blue"];
-    }
 
     return (
         <div>
@@ -18,7 +16,7 @@ const ColorSearch = ({ setColor }) => {
             />
             <>
             {
-                extractMatchingColors().map(colorName => (
+                extractMatchingColors(searchQuery).map(colorName => (
                     <div className="row" onClick={() => setColor(COLORS[colorName])}>
                         <div className="col-2" style={{backgroundColor: COLORS[colorName]}}></div>
                         <div className="col">{colorName}</div> 
