@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { initialGridState } from '../helpers/Grid';
-import '../App.css';
+import '../css/Grid.css';
 
 const Grid = () => {
     const [gridState, setGridState] = useState(initialGridState);
