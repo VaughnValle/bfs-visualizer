@@ -1,14 +1,9 @@
 import COLORS from '../constants/Colors.js';
 
 const extractMatchingColor = (searchVal) => {
-    const matchingColors = [];
     const formattedSearchVal = searchVal.toUpperCase();
-    Object.keys(COLORS).forEach(key => {
-        if (key.toUpperCase().indexOf(formattedSearchVal) != -1){
-            matchingColors.push(key);
-        }
-    });
-    return matchingColors;
+    return Object.keys(COLORS)
+        .filter((key) => (key.toUpperCase().indexOf(formattedSearchVal) != -1))
 }
 
 export default extractMatchingColor;
