@@ -66,7 +66,7 @@ const Grid = ({
     )
 
     return (
-        <table className="grid">
+        <table className="grid col border">
             {
                 renderedGrid
             }        

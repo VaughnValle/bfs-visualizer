@@ -4,7 +4,7 @@ import { PAINT, ERASE, FILL } from '../constants/ActionTypes';
 
 const PaintOptions = ({ setActionType }) => {
     return (
-        <div className="col">
+        <div className="col border">
             <div onClick={() => setActionType(PAINT)}>
                 Paint
             </div>
