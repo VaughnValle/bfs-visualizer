@@ -3,7 +3,7 @@ import PaintOptions from './components/PaintOptions';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
       <div className="row">
         <Grid/>
         <PaintOptions/>

@@ -1,1 +1,1 @@
-export const GRID_DIMS = 100;
+export const GRID_DIMS = 50;
