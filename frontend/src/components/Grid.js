@@ -1,10 +1,15 @@
 import React, { useState } from 'react'
-import { initialGridState, floodFill } from '../helpers/Grid';
-import Colors, { TRANSPARENT } from '../constants/Colors';
+import { floodFill } from '../helpers/Grid';
+import COLORS, { TRANSPARENT } from '../constants/Colors';
 import '../css/Grid.css';
 import { PAINT, ERASE } from '../constants/ActionTypes';
 
-const Grid = ({ actionType, gridState, setGridState }) => {
+const Grid = ({
+    actionType,
+    gridState,
+    setGridState,
+    color,
+}) => {
 
     const [mouseDown, setMouseDown] = useState(false);
 
@@ -15,23 +20,19 @@ const Grid = ({ actionType, gridState, setGridState }) => {
     }) => {
         if (!mouseDown && !fromCellClick) return;
         let newGridState;
-        let colorHex;
         switch (actionType) {
             case PAINT: 
-                colorHex = Colors['black'];
                 newGridState = [...gridState];
-                newGridState[rowInd][colInd] = colorHex;
+                newGridState[rowInd][colInd] = color
                 break;
             case ERASE: 
-                colorHex = Colors[TRANSPARENT];
                 newGridState = [...gridState];
-                newGridState[rowInd][colInd] = colorHex;
+                newGridState[rowInd][colInd] = COLORS[TRANSPARENT]
                 break;
             default: 
-                colorHex = Colors['black'];
                 newGridState = floodFill({
                     gridState: [ ...gridState ],
-                    colorHex,
+                    color,
                     rowInd,
                     colInd,
                 })
