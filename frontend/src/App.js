@@ -22,7 +22,7 @@ function App() {
           gridState={gridState}
           setGridState={setGridState}
         />
-        <PaintOptions setActionType={setActionType}/>
+        <PaintOptions setActionType={setActionType} actionType={actionType}/>
       </div>
     </div>
   );
