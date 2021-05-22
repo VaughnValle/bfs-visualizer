@@ -1,3 +1,5 @@
+export const TRANSPARENT = 'white';
+
 export default {
     "aliceblue": "#f0f8ff",
     "antiquewhite": "#faebd7",
