@@ -11,6 +11,7 @@ const PaintOptions = ({ actionType, setActionType }) => {
                     className={`col-sm-4 btn btn-outline-primary ${
                         actionType === PAINT && 'active'
                     }`}
+                    id="paintBtn"
                     onClick={() => setActionType(PAINT)}>Paint</button>
             </div>
             <div className="row justify-content-center py-3">
@@ -19,6 +20,7 @@ const PaintOptions = ({ actionType, setActionType }) => {
                     className={`col-sm-4 btn btn-outline-primary ${
                         actionType === ERASE && 'active'
                     }`}
+                    id="eraseBtn"
                     onClick={() => setActionType(ERASE)}>Erase</button>
             </div>
             <div className="row justify-content-center py-3">
@@ -27,6 +29,7 @@ const PaintOptions = ({ actionType, setActionType }) => {
                     className={`col-sm-4 btn btn-outline-primary ${
                         actionType === FILL && 'active'
                     }`}
+                    id="fillBtn"
                     onClick={() => setActionType(FILL)}>Fill</button>    
             </div>
         </div>

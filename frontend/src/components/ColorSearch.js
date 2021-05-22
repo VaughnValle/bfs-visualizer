@@ -10,7 +10,7 @@ const ColorSearch = ({ color, setColor }) => {
         <div className="col">
             <div className="row mb-2">
                 <div className="col-6">Current color:</div> 
-                <div className="col-2 rounded" style={{backgroundColor: color}}></div> 
+                <div className="col-2 rounded border" style={{backgroundColor: color}}></div> 
             </div>
             <input
                 className="col-12 mb-2 border mx-0 rounded"
