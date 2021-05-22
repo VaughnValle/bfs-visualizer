@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/LeftContainer.css'
 import ColorSearch from './ColorSearch';
 
-const LeftContainer = ({ setColor }) => {
+const LeftContainer = ({ color, setColor }) => {
     return(
         <div className="col border" id="left-container">
             <div className="row m-4 my-0" id="new-pixel-art">
@@ -12,7 +12,7 @@ const LeftContainer = ({ setColor }) => {
                 onClick={() => window.location.reload()}>New Pixel Art</button>
             </div>
             <div className="row" id="color-search-container">
-                <ColorSearch setColor={setColor}/>
+                <ColorSearch setColor={setColor} color={color}/>
             </div>
             <div className="row" id="save-pixel-art">
                 <button type="button" className="col btn btn-success m-4 my-0">Save Pixel Art</button>

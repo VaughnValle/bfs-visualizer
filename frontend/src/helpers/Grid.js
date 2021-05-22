@@ -24,10 +24,16 @@ const gridMotion = {
     right: { offsetX: 0, offsetY: 1 },
 }
 
-const isFillableGridPosition = ({ currentX, currentY }, coloredCells, gridState) => {
+const isFillableGridPosition = ({
+    currentX,
+    currentY,
+    coloredCells,
+    gridState,
+    originalColor,
+}) => {
     if (currentX < 0 || currentX >= GRID_DIMS) return false;
     if (currentY < 0 || currentY >= GRID_DIMS) return false;
-    if (gridState[currentX][currentY] !== COLORS[TRANSPARENT]) return false;
+    if (gridState[currentX][currentY] !== originalColor) return false;
     return !coloredCells.some(cell => currentX === cell.x && currentY === cell.y);
 }
 
@@ -37,7 +43,7 @@ export const floodFill = ({
     rowInd,
     colInd,
 }) => {
-    if (gridState[rowInd][colInd] !== COLORS[TRANSPARENT]) return gridState;
+    const originalColor = gridState[rowInd][colInd];
     const queue = [{ currentX: rowInd, currentY: colInd }];
     const coloredCells = [{ x: rowInd, y: colInd }];
     gridState[rowInd][colInd] = color;
@@ -46,7 +52,13 @@ export const floodFill = ({
         Object.keys(gridMotion).forEach(direction => {
             const { offsetX, offsetY } = gridMotion[direction];
             const newPosition = { currentX: currentX + offsetX, currentY: currentY + offsetY };
-            if (isFillableGridPosition(newPosition, coloredCells, gridState)) {
+            if (isFillableGridPosition({
+                currentX: newPosition.currentX,
+                currentY: newPosition.currentY,
+                coloredCells,
+                gridState,
+                originalColor,
+            })){
                 queue.unshift(newPosition);
                 coloredCells.push({ x: newPosition.currentX, y: newPosition.currentY });
                 gridState[newPosition.currentX][newPosition.currentY] = color;
