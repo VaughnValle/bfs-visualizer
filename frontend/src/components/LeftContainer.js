@@ -4,18 +4,18 @@ import ColorSearch from './ColorSearch';
 
 const LeftContainer = ({ setColor }) => {
     return(
-        <div class=".container border bg-black" id="left-container">
-            <div class=" row justify-content-center align-items-center" id="new-pixel-art">
+        <div className="col border bg-black" id="left-container">
+            <div className="row m-4 my-0" id="new-pixel-art">
             <button 
                 type="button"
-                class="col-sm-5 btn btn-primary"
+                className="col btn btn-primary"
                 onClick={() => window.location.reload()}> New Pixel Art</button>
             </div>
-            <div class="row justify-content-center align-items-center" id="color-search-container">
+            <div className="row" id="color-search-container">
                 <ColorSearch setColor={setColor}/>
             </div>
-            <div class="row justify-content-center align-items-center" id="save-pixel-art">
-            <button type="button" class="col-sm-5 btn btn-danger">Save Pixel Art</button>
+            <div className="row" id="save-pixel-art">
+                <button type="button" className="col btn btn-danger m-4 my-0">Save Pixel Art</button>
             </div>
         </div>    
     )

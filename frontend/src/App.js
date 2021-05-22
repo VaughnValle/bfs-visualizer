@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App container">
-      <div className="row">
+      <div className="row row.row-eq-height > .col-xs-4">
         <LeftContainer setColor={setColor}/>
         <Grid
           color={color}
