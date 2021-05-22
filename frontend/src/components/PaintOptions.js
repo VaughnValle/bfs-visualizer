@@ -1,17 +1,18 @@
 import React from 'react';
 import '../css/PaintOptions.css';
+import { PAINT, ERASE, FILL } from '../constants/ActionTypes';
 
-const PaintOptions = () => {
+const PaintOptions = ({ setActionType }) => {
     return (
         <div className="col">
-            <div>
-                hello
+            <div onClick={() => setActionType(PAINT)}>
+                Paint
             </div>
-            <div>
-                I am sheen
+            <div onClick={() => setActionType(ERASE)}>
+                Erase
             </div>
-            <div>
-                Fuck you
+            <div onClick={() => setActionType(FILL)}>
+                Fill
             </div>    
         </div>
     )

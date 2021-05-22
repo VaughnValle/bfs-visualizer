@@ -1,29 +1,62 @@
-import React, { useState, useEffect } from 'react'
-import { initialGridState } from '../helpers/Grid';
-import Colors from '../constants/Colors';
+import React, { useState } from 'react'
+import { initialGridState, floodFill } from '../helpers/Grid';
+import Colors, { TRANSPARENT } from '../constants/Colors';
 import '../css/Grid.css';
+import { PAINT, ERASE } from '../constants/ActionTypes';
 
-const Grid = (props) => {
+const Grid = ({ actionType, gridState, setGridState }) => {
 
-    const [gridState, setGridState] = useState(initialGridState);
     const [mouseDown, setMouseDown] = useState(false);
 
-    const onCellHover = (rowInd, colInd) => {
-        if (!mouseDown) return;
-        const colorHex = Colors['black'];
-        let newGridState = [...gridState];
-        newGridState[rowInd][colInd] = colorHex;
+    const onCellHover = ({
+        rowInd,
+        colInd,
+        fromCellClick = false
+    }) => {
+        if (!mouseDown && !fromCellClick) return;
+        let newGridState;
+        let colorHex;
+        switch (actionType) {
+            case PAINT: 
+                colorHex = Colors['black'];
+                newGridState = [...gridState];
+                newGridState[rowInd][colInd] = colorHex;
+                break;
+            case ERASE: 
+                colorHex = Colors[TRANSPARENT];
+                newGridState = [...gridState];
+                newGridState[rowInd][colInd] = colorHex;
+                break;
+            default: 
+                colorHex = Colors['black'];
+                newGridState = floodFill({
+                    gridState: [ ...gridState ],
+                    colorHex,
+                    rowInd,
+                    colInd,
+                })
+        }
         setGridState(newGridState);
     }
 
     const renderedGrid = ( 
         <>
-        {gridState.map((row, rowInd) => <tr>{
+        {gridState.map((row, rowInd) => <tr key={rowInd}>{
             row.map((hex, colInd) => {
             return (
             <td className="grid-cell" 
-                style={{backgroundColor: hex}} 
-                onMouseOver={() => onCellHover(rowInd, colInd)}>
+                style={{backgroundColor: hex}}
+                onMouseDown={() => {
+                    setMouseDown(true);
+                    onCellHover({
+                        rowInd,
+                        colInd,
+                        fromCellClick: true,
+                    });
+                }}
+                onMouseUp={() => setMouseDown(false)}
+                onMouseOver={() => onCellHover({rowInd, colInd})}
+                key={colInd}>
             </td>
             )
         })
@@ -32,9 +65,7 @@ const Grid = (props) => {
     )
 
     return (
-        <table className="grid"
-            onMouseDown={() => setMouseDown(true)}
-            onMouseUp={() => setMouseDown(false)}>
+        <table className="grid">
             {
                 renderedGrid
             }        
