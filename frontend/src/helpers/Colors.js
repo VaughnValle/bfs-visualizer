@@ -1,12 +1,12 @@
 import COLORS, { COLOR_NOT_FOUND } from '../constants/Colors.js';
 
-const indexOf = (string, query) => {
-    for(let stringIndex = 0; stringIndex < string.length; stringIndex++) {
+const indexOf = (base, query) => {
+    for(let baseIndex = 0; baseIndex < base.length; baseIndex++) {
         for(let queryIndex = 0; queryIndex < query.length; queryIndex++) {
-          if (string[stringIndex+queryIndex] !== query[queryIndex]) 
+          if (base[baseIndex+queryIndex] !== query[queryIndex]) 
             break;
           if (queryIndex === query.length - 1) 
-            return stringIndex;
+            return baseIndex;
         }
     }
     return COLOR_NOT_FOUND;
