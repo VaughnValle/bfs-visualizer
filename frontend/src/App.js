@@ -5,7 +5,7 @@ import LeftContainer from './components/LeftContainer';
 function App() {
   return (
     <div className="App">
-      <Grid/>
+      {/*<Grid/>*/}
       <LeftContainer/>
     </div>
   );
