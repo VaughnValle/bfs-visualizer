@@ -13,9 +13,9 @@ function App() {
   const [color, setColor] = useState();
 
   return (
-    <div className="App container">
+    <div className="App container" style={{cursor:'pointer'}}>
       <div className="row row.row-eq-height > .col-xs-4">
-        <LeftContainer setColor={setColor}/>
+        <LeftContainer setColor={setColor} color={color}/>
         <Grid
           color={color}
           actionType={actionType}
