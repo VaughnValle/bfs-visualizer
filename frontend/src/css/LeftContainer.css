@@ -8,6 +8,10 @@
 }
 
 #test {
-    padding-top: 40%;
-    padding-bottom: 40%;
+    padding-top: 8rem;
+    padding-bottom: 12rem;
+}
+
+#save-pixel-art {
+    padding-bottom: 2rem;
 }
