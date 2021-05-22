@@ -11,7 +11,7 @@ const LeftContainer = ({ setColor }) => {
                 class="col-sm-5 btn btn-primary"
                 onClick={() => window.location.reload()}> New Pixel Art</button>
             </div>
-            <div class="row justify-content-center align-items-center" id="test">
+            <div class="row justify-content-center align-items-center" id="color-search-container">
                 <ColorSearch setColor={setColor}/>
             </div>
             <div class="row justify-content-center align-items-center" id="save-pixel-art">
