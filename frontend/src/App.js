@@ -3,7 +3,6 @@ import { initialGridState } from './helpers/Grid';
 import { PAINT } from './constants/ActionTypes';
 
 import Grid from './components/Grid';
-import PaintOptions from './components/PaintOptions';
 import LeftContainer from './components/LeftContainer';
 
 function App() {
@@ -15,14 +14,18 @@ function App() {
   return (
     <div className="App container" style={{cursor:'pointer'}}>
       <div className="row row.row-eq-height > .col-xs-4">
-        <LeftContainer setColor={setColor} color={color}/>
+        <LeftContainer 
+          color={color}
+          setColor={setColor}
+          actionType={actionType}
+          setActionType={setActionType}
+        />
         <Grid
           color={color}
           actionType={actionType}
           gridState={gridState}
           setGridState={setGridState}
         />
-        <PaintOptions setActionType={setActionType} actionType={actionType}/>
       </div>
     </div>
   );
