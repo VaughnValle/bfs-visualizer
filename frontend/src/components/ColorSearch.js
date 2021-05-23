@@ -16,7 +16,7 @@ const ColorSearch = ({ color, setColor }) => {
                 className="col-12 mb-2 border mx-0 rounded"
                 onChange={e => setSearchQuery(e.target.value)}
                 value={searchQuery}
-                placeholder="Search for a Color"
+                placeholder="Pick a color"
                 name='color'
             />
             <div className="col-12 border overflow-auto rounded" style={{height:'150px'}}>
