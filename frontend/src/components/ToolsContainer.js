@@ -3,7 +3,7 @@ import '../css/LeftContainer.css'
 import ColorSearch from './ColorSearch';
 import PaintOptions from './PaintOptions';
 
-const LeftContainer = ({
+const ToolsContainer = ({
     color,
     setColor,
     actionType,
@@ -33,4 +33,4 @@ const LeftContainer = ({
     )
 }
 
-export default LeftContainer;
+export default ToolsContainer;

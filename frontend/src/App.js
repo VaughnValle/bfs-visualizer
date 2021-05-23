@@ -3,7 +3,7 @@ import { initialGridState } from './helpers/Grid';
 import { PAINT } from './constants/ActionTypes';
 
 import Grid from './components/Grid';
-import LeftContainer from './components/LeftContainer';
+import ToolsContainer from './components/ToolsContainer';
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App container" style={{cursor:'pointer'}}>
       <div className="row row.row-eq-height > .col-xs-4">
-        <LeftContainer 
+        <ToolsContainer 
           color={color}
           setColor={setColor}
           actionType={actionType}
