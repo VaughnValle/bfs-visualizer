@@ -13,6 +13,7 @@ const ColorSearch = ({ color, setColor }) => {
                 <div className="col-2 rounded border" style={{backgroundColor: color}}></div> 
             </div>
             <input
+                id="color-search"
                 className="col-12 mb-2 border mx-0 rounded"
                 onChange={e => setSearchQuery(e.target.value)}
                 value={searchQuery}

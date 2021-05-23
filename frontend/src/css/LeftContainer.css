@@ -1,14 +1,44 @@
+#root {
+  scrollbar-color: rgb(0,176,204) transparent !important;
+}
+
+body {
+  color: #00ddff; 
+  background-image: url("../images/wallpaper.png");
+}
+
 #left-container {
-    width: 25%;
+    width: 32%;
+    background-color: #000D1C;
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: #000D1C !important;
+    border-radius: 20px;
+    padding: 0 2em;
+    margin-top: 2%;
+    margin-right: 4%;
 }
 
 #new-pixel-art {
     padding-top: 2rem;
+    margin-top: 3rem;
+}
+
+#new-pixel-art button, #save-pixel-art button {
+    width: 80% !important;
+    border-radius: 30px !important;
+    border-color: #00ddff !important;
+    background-color: #000D1C !important;
+    font-family: var(--bg-fonts-sans-serif);
+    font-weight: 700;
+    padding: 1rem .2rem;
+    margin-bottom: 1em;
 }
 
 #color-search-container {
     padding-top: 8rem;
     padding-bottom: 12rem;
+    margin-top: 5rem !important;
 }
 
 #save-pixel-art {
