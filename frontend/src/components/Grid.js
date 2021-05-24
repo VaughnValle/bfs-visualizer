@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { floodFill } from '../helpers/Grid';
 import COLORS, { TRANSPARENT } from '../constants/Colors';
 import '../css/Grid.css';
