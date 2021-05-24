@@ -11,7 +11,7 @@ const PaintOptions = ({ actionType, setActionType }) => {
                     className={`col-sm-6 btn btn-outline-primary ${
                         actionType === PAINT && 'active'
                     }`}
-                    id="paintBtn"
+                    id="paint-btn"
                     onClick={() => setActionType(PAINT)}>PAINT</button>
             </div>
             <div className="row justify-content-center mb-1">
@@ -20,7 +20,7 @@ const PaintOptions = ({ actionType, setActionType }) => {
                     className={`col-sm-6 btn btn-outline-primary ${
                         actionType === ERASE && 'active'
                     }`}
-                    id="eraseBtn"
+                    id="erase-btn"
                     onClick={() => setActionType(ERASE)}>ERASE</button>
             </div>
             <div className="row justify-content-center">
@@ -29,7 +29,7 @@ const PaintOptions = ({ actionType, setActionType }) => {
                     className={`col-sm-6 btn btn-outline-primary ${
                         actionType === FILL && 'active'
                     }`}
-                    id="fillBtn"
+                    id="fill-btn"
                     onClick={() => setActionType(FILL)}>FILL</button>    
             </div>
         </div>

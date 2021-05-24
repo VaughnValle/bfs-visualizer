@@ -1,0 +1,13 @@
+#current-color {
+    border-style: solid;
+    border-color: #00ddff;
+    border-width: 1px;
+}
+
+i {
+    transition: transform 0.3s ease;
+}
+
+i:hover {    
+    transform: scale(1.5);
+}
