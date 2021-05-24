@@ -2,6 +2,7 @@ import React from 'react'
 import '../css/ToolsContainer.css'
 import ColorSearch from './ColorSearch';
 import PaintOptions from './PaintOptions';
+import saveImage from '../helpers/Export';
 
 const ToolsContainer = ({
     color,
@@ -33,10 +34,14 @@ const ToolsContainer = ({
                     onClick={() => window.location.reload()}>New Pixel Art</button>
             </div>
             <div className="row" id="save-pixel-art">
-                <button type="button" className="col btn btn-outline-primary mx-4">Save Pixel Art</button>
+                <button 
+                    type="button" 
+                    className="col btn btn-outline-primary mx-4"
+                    onClick={saveImage}>Save Pixel Art</button>
             </div>
         </div>    
     )
 }
 
 export default ToolsContainer;
+
