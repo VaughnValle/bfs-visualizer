@@ -1,15 +1,16 @@
-import React from 'react'
-import '../css/ToolsContainer.css'
+import React from 'react';
+import '../css/ToolsContainer.css';
 import ColorSearch from './ColorSearch';
 import PaintOptions from './PaintOptions';
+import { initialGridState } from '../helpers/Grid';
 
 const ToolsContainer = ({
     color,
     setColor,
     actionType,
     setActionType,
-    colorPickerState,
     setColorPickerState,
+    setGridState
 }) => {
     return(
         <div className="col-2 border" id="left-container">
@@ -30,7 +31,7 @@ const ToolsContainer = ({
                 <button 
                     type="button"
                     className="col btn btn-outline-primary mx-4 mb-2"
-                    onClick={() => window.location.reload()}>New Pixel Art</button>
+                    onClick={() => setGridState(initialGridState)}>New Pixel Art</button>
             </div>
             <div className="row" id="save-pixel-art">
                 <button type="button" className="col btn btn-outline-primary mx-4">Save Pixel Art</button>
