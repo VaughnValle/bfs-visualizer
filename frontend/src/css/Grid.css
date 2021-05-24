@@ -1,3 +1,11 @@
+.border #color-search {
+  border: none !important;
+  border-bottom: 1px solid #00ddff !important;
+  border-radius: 0px !important;
+  background-color: #000D1C;
+  color: #ffffff;
+}
+
 .grid {
     width: 45vw;
     height: 45vw;

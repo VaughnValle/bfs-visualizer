@@ -12,7 +12,7 @@ const PaintOptions = ({ actionType, setActionType }) => {
                         actionType === PAINT && 'active'
                     }`}
                     id="paintBtn"
-                    onClick={() => setActionType(PAINT)}>Paint</button>
+                    onClick={() => setActionType(PAINT)}>PAINT</button>
             </div>
             <div className="row justify-content-center mb-1">
                 <button 
@@ -21,7 +21,7 @@ const PaintOptions = ({ actionType, setActionType }) => {
                         actionType === ERASE && 'active'
                     }`}
                     id="eraseBtn"
-                    onClick={() => setActionType(ERASE)}>Erase</button>
+                    onClick={() => setActionType(ERASE)}>ERASE</button>
             </div>
             <div className="row justify-content-center">
                 <button 
@@ -30,7 +30,7 @@ const PaintOptions = ({ actionType, setActionType }) => {
                         actionType === FILL && 'active'
                     }`}
                     id="fillBtn"
-                    onClick={() => setActionType(FILL)}>Fill</button>    
+                    onClick={() => setActionType(FILL)}>FILL</button>    
             </div>
         </div>
     )
