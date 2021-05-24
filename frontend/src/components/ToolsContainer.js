@@ -7,7 +7,9 @@ const ToolsContainer = ({
     color,
     setColor,
     actionType,
-    setActionType
+    setActionType,
+    colorPickerState,
+    setColorPickerState,
 }) => {
     return(
         <div className="col-2 border" id="left-container">
@@ -18,7 +20,11 @@ const ToolsContainer = ({
                 />
             </div>
             <div className="row py-0 my-3" id="color-search-container">
-                <ColorSearch setColor={setColor} color={color}/>
+                <ColorSearch
+                    setColor={setColor}
+                    color={color}
+                    setColorPickerState={setColorPickerState}
+                />
             </div>
             <div className="row" id="new-pixel-art">
                 <button 

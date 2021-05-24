@@ -2,7 +2,11 @@ import React, { useState } from 'react'
 import COLORS from '../constants/Colors';
 import { extractMatchingColors } from '../helpers/Colors';
 
-const ColorSearch = ({ color, setColor }) => {
+const ColorSearch = ({
+    color,
+    setColor,
+    setColorPickerState,
+}) => {
 
     const [searchQuery, setSearchQuery] = useState('');
 
@@ -11,6 +15,7 @@ const ColorSearch = ({ color, setColor }) => {
             <div className="row mb-2">
                 <div className="col-6">Current color:</div> 
                 <div className="col-2 rounded border" style={{backgroundColor: color}}></div> 
+                <i class="fas fa-eye-dropper" onClick={() => setColorPickerState(true)}></i>
             </div>
             <input
                 id="color-search"

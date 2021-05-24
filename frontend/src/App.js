@@ -10,6 +10,7 @@ function App() {
   const [gridState, setGridState] = useState(initialGridState);
   const [actionType, setActionType] = useState(PAINT);
   const [color, setColor] = useState();
+  const [colorPickerState, setColorPickerState] = useState(false);
 
   return (
     <div className="App container" style={{cursor:'pointer'}}>
@@ -19,12 +20,16 @@ function App() {
           setColor={setColor}
           actionType={actionType}
           setActionType={setActionType}
+          setColorPickerState={setColorPickerState}
         />
         <Grid
           color={color}
+          setColor={setColor}
           actionType={actionType}
           gridState={gridState}
           setGridState={setGridState}
+          colorPickerState={colorPickerState}
+          setColorPickerState={setColorPickerState}
         />
       </div>
     </div>
