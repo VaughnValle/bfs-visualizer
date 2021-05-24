@@ -76,7 +76,7 @@ const Grid = ({
     )
 
     return (
-        <table className="grid col border">
+        <table id="canvas" className="grid col border">
             {
                 renderedGrid
             }        
