@@ -1,10 +1,10 @@
 #root {
-  scrollbar-color: rgb(0,176,204) transparent !important;
+    scrollbar-color: rgb(0,176,204) transparent !important;
 }
 
 body {
-  color: #00ddff; 
-  background-image: url("../images/wallpaper.png");
+    color: #00ddff; 
+    background-image: url("../images/wallpaper.png");
 }
 
 #left-container {
@@ -28,11 +28,12 @@ body {
     width: 80% !important;
     border-radius: 30px !important;
     border-color: #00ddff !important;
-    background-color: #000D1C !important;
+    color: white;
     font-family: var(--bg-fonts-sans-serif);
     font-weight: 700;
     padding: 1rem .2rem;
     margin-bottom: 1em;
+    box-shadow: none;
 }
 
 #color-search-container {
@@ -44,3 +45,4 @@ body {
 #save-pixel-art {
     padding-bottom: 2rem;
 }
+

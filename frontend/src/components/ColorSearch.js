@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import COLORS from '../constants/Colors';
 import '../css/ColorSearch.css';
 import { extractMatchingColors } from '../helpers/Colors';
+
 
 const ColorSearch = ({
     color,
@@ -16,7 +17,7 @@ const ColorSearch = ({
             <div className="row mb-2">
                 <div className="col-sm-5">Current color:</div> 
                 <div className="col-sm-2 rounded" id="current-color" style={{backgroundColor: color}}></div> 
-                <i class="fas fa-eye-dropper" onClick={() => setColorPickerState(true)}></i>
+                <i className="fas fa-eye-dropper col-sm-1 offset-sm-1" onClick={() => setColorPickerState(true)}></i>
             </div>
             <input
                 id="color-search"
