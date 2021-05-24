@@ -9,6 +9,9 @@ const Grid = ({
     gridState,
     setGridState,
     color,
+    setColor,
+    colorPickerState,
+    setColorPickerState,
 }) => {
 
     const [mouseDown, setMouseDown] = useState(false);
@@ -39,6 +42,20 @@ const Grid = ({
         }
         setGridState(newGridState);
     }
+    
+    const handleMouseDown = (rowInd, colInd) => {
+        if (colorPickerState) {
+            setColor(gridState[rowInd][colInd]);
+            setColorPickerState(false);
+            return;
+        }
+        setMouseDown(true);
+        onCellHover({
+            rowInd,
+            colInd,
+            fromCellClick: true,
+        });
+    }
 
     const renderedGrid = ( 
         <>
@@ -47,14 +64,7 @@ const Grid = ({
             return (
             <td className="grid-cell" 
                 style={{backgroundColor: hex}}
-                onMouseDown={() => {
-                    setMouseDown(true);
-                    onCellHover({
-                        rowInd,
-                        colInd,
-                        fromCellClick: true,
-                    });
-                }}
+                onMouseDown={() => handleMouseDown(rowInd, colInd)}
                 onMouseUp={() => setMouseDown(false)}
                 onMouseOver={() => onCellHover({rowInd, colInd})}
                 key={colInd}>
