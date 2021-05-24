@@ -1,7 +1,6 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import { initialGridState } from './helpers/Grid';
 import { PAINT } from './constants/ActionTypes';
-
 import Grid from './components/Grid';
 import ToolsContainer from './components/ToolsContainer';
 
@@ -21,6 +20,7 @@ function App() {
           actionType={actionType}
           setActionType={setActionType}
           setColorPickerState={setColorPickerState}
+          setGridState={setGridState}
         />
         <Grid
           color={color}
