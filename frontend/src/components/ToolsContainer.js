@@ -3,7 +3,7 @@ import '../css/ToolsContainer.css';
 import ColorSearch from './ColorSearch';
 import PaintOptions from './PaintOptions';
 import saveImage from '../helpers/Export';
-import { initialGridState } from '../helpers/Grid';
+import { getInitialGridState } from '../helpers/Grid';
 
 const ToolsContainer = ({
     color,
@@ -11,7 +11,8 @@ const ToolsContainer = ({
     actionType,
     setActionType,
     setColorPickerState,
-    setGridState
+    setGridState,
+    setLoadModal,
 }) => {
     return(
         <div className="col-2 border" id="left-container">
@@ -32,17 +33,19 @@ const ToolsContainer = ({
                 <button 
                     type="button"
                     className="col btn btn-outline-primary mx-4 mb-2"
-                    onClick={() => setGridState(initialGridState)}>New Pixel Art</button>
+                    onClick={() => setGridState(getInitialGridState())}>New Pixel Art</button>
             </div>
             <div className="row" id="save-pixel-art">
                 <button 
                     type="button" 
                     className="col btn btn-outline-primary mx-4"
-                    onClick={saveImage}>Save Pixel Art</button>
+                    onClick={() => {
+                        setLoadModal(true);
+                        saveImage(setLoadModal);
+                    }}>Save Pixel Art</button>
             </div>
         </div>    
     )
 }
 
 export default ToolsContainer;
-

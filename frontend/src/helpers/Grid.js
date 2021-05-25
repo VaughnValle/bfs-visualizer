@@ -68,4 +68,4 @@ export const floodFill = ({
     return gridState;
 }
 
-export const initialGridState = createColStates();
+export const getInitialGridState = () => createColStates();

@@ -22,14 +22,12 @@ const Grid = ({
         fromCellClick = false
     }) => {
         if (!mouseDown && !fromCellClick) return;
-        let newGridState;
+        let newGridState = [...gridState];
         switch (actionType) {
             case PAINT: 
-                newGridState = [...gridState];
                 newGridState[rowInd][colInd] = color
                 break;
             case ERASE: 
-                newGridState = [...gridState];
                 newGridState[rowInd][colInd] = COLORS[TRANSPARENT]
                 break;
             default: 
@@ -40,7 +38,7 @@ const Grid = ({
                     colInd,
                 })
         }
-        setGridState(newGridState);
+        setGridState([...newGridState]);
     }
     
     const handleMouseDown = (rowInd, colInd) => {
