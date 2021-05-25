@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './css/App.css';
 import { getInitialGridState } from './helpers/Grid';
 import { PAINT } from './constants/ActionTypes';
 import Grid from './components/Grid';
@@ -17,7 +18,7 @@ function App() {
     <div className="App container" style={{cursor:'pointer'}}>
       <Loading show={loadModal}/>
       <div className="row row.row-eq-height > .col-xs-4">
-        <ToolsContainer 
+        <ToolsContainer
           color={color}
           setColor={setColor}
           actionType={actionType}

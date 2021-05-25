@@ -2,11 +2,6 @@
     scrollbar-color: rgb(0,176,204) transparent !important;
 }
 
-body {
-    color: #00ddff; 
-    background-image: url("../images/wallpaper.png");
-}
-
 #left-container {
     width: 32%;
     background-color: #000D1C;
