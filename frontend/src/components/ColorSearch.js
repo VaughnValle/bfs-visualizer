@@ -15,9 +15,9 @@ const ColorSearch = ({
     return (
         <div className="col">
             <div className="row mb-2">
-                <div className="col-sm-5">Current color:</div> 
+                <div className="col-sm-4">Current color:</div> 
                 <div className="col-sm-2 rounded" id="current-color" style={{backgroundColor: color}}></div> 
-                <i className="fas fa-eye-dropper col-sm-1 offset-sm-1" onClick={() => setColorPickerState(true)}></i>
+                <i className="fas fa-eye-dropper col-sm-1" onClick={() => setColorPickerState(true)}></i>
             </div>
             <input
                 id="color-search"
