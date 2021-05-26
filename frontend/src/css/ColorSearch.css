@@ -1,14 +1,14 @@
 #current-color {
-    border-style: solid;
-    border-color: #00ddff;
-    border-width: 1px;
+  border-style: solid;
+  border-color: #00ddff;
+  border-width: 1px;
 }
 
 i {
-    margin-left: 9rem;
-    transition: transform 0.3s ease;
+  margin-left: 9rem;
+  transition: transform 0.3s ease;
 }
 
-i:hover {    
-    transform: scale(1.5);
+i:hover {
+  transform: scale(1.5);
 }

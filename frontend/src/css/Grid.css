@@ -2,11 +2,11 @@
   border: none !important;
   border-bottom: 1px solid #00ddff !important;
   border-radius: 0px !important;
-  background-color: #000D1C;
+  background-color: #000d1c;
   color: #ffffff;
 }
 
 .grid {
-    width: 45vw;
-    height: 45vw;
+  width: 45vw;
+  height: 45vw;
 }
