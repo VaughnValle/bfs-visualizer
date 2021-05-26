@@ -2,27 +2,29 @@
   margin-top: 4em;
 }
 
-#paint-btn, #erase-btn, #fill-btn {
-    box-shadow: none;
-    border-radius: 30px;
-    border-color: #00ddff;
-    width: 72%;
-    padding: 1rem .2rem;
-    margin-bottom: 0.8em;
-    font-family: var(--bg-fonts-sans-serif);
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #ffffff;
+#paint-btn,
+#erase-btn,
+#fill-btn {
+  box-shadow: none;
+  border-radius: 30px;
+  border-color: #00ddff;
+  width: 72%;
+  padding: 1rem 0.2rem;
+  margin-bottom: 0.8em;
+  font-family: var(--bg-fonts-sans-serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffffff;
 }
 
 .btn-outline-primary.active {
-  color: #000D1C;
+  color: #000d1c;
   background-color: #00ddff;
   border-color: #00ddff;
 }
 
 .btn-outline-primary:hover {
-  color: #000D1C;
+  color: #000d1c;
   background-color: #00ddff;
   border-color: #00ddff;
 }

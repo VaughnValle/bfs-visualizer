@@ -1,13 +1,12 @@
-import { useState } from 'react';
-import './css/App.css';
-import { getInitialGridState } from './helpers/Grid';
-import { PAINT } from './constants/ActionTypes';
-import Grid from './components/Grid';
-import ToolsContainer from './components/ToolsContainer';
-import Loading from './components/modals/Loading';
+import { useState } from "react";
+import "./css/App.css";
+import { getInitialGridState } from "./helpers/Grid";
+import { PAINT } from "./constants/ActionTypes";
+import Grid from "./components/Grid";
+import ToolsContainer from "./components/ToolsContainer";
+import Loading from "./components/modals/Loading";
 
 function App() {
-
   const [gridState, setGridState] = useState(getInitialGridState());
   const [actionType, setActionType] = useState(PAINT);
   const [color, setColor] = useState();
@@ -15,8 +14,8 @@ function App() {
   const [loadModal, setLoadModal] = useState(false);
 
   return (
-    <div className="App container" style={{cursor:'pointer'}}>
-      <Loading show={loadModal}/>
+    <div className="App container" style={{ cursor: "pointer" }}>
+      <Loading show={loadModal} />
       <div className="row row.row-eq-height > .col-xs-4">
         <ToolsContainer
           color={color}
